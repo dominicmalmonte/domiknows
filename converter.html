@@ -40,3 +40,153 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
   <a href="https://mail.google.com/mail/u/2/#inbox" class="w3-bar-item w3-button w3-padding-large">Mail</a>
   <a href="https://www.facebook.com/dominic.miguel.almonte" class="w3-bar-item w3-button w3-padding-large">My Account</a>
 </div>
+    
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+         <h4 class="w3-center">Dominic Miguel Almonte</h4>
+         <p class="w3-center"><img src="avatar.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+         <hr>
+         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> BS Computer Science 1-A</p>
+         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Davao City</p>
+         <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> December 29, 2001</p>
+        </div>
+      </div>
+      <br>
+    
+    <!-- End Left Column -->
+    </div>
+    
+    <!-- Middle Column -->
+    <div class="w3-col m9">  
+     <hr style="max-width:80%">
+        <div class="w3-content" style="max-width:2000px;margin-top:1px;margin-left:23px" id="ftoc">
+            <h2 class="w3-wide">Fahrenheit to Celsius</h2>
+            <div class="w3-container">
+                <p><label for="farenheit1">Fahrenheit</label></p>
+                <input id="farenheit1" class="w3-input w3-border" type="number" placeholder="">
+                <p><label for="celsius1">Celsius</label></p>
+                <input id="celsius1" class="w3-input w3-border" type="number" placeholder="" readonly>
+                <button id="button" name="button" onclick="farenheittocelsius()" class="w3-button w3-theme w3-section">Convert</button>
+            </div>
+            </div>
+        <div class="w3-content" style="max-width:2000px;margin-top:52px;margin-left:23px" id="ctof">
+            <h2 class="w3-wide">Celsius to Fahrenheit</h2>
+            <div class="w3-container">
+                <p><label for="celsius2">Celsius</label></p>
+                <input id="celsius2" class="w3-input w3-border" type="number" placeholder="">
+                <p><label for="farenheit2">Fahrenheit</label></p>
+                <input id="farenheit2" class="w3-input w3-border" type="number" placeholder="" readonly>
+                <button id="button" name="button" onclick="celsiustofarenheit()" class="w3-button w3-theme w3-section">Convert</button>
+            </div>
+            </div>
+        <div class="w3-content" style="max-width:2000px;margin-top:52px;margin-left:23px" id="mtoft">
+            <h2 class="w3-wide">Meters to Feet</h2>
+            <div class="w3-container">
+                <p><label for="meters1">Meters</label></p>
+                <input id="meters1" class="w3-input w3-border" type="number" placeholder="">
+                <p><label for="feet1">Feet</label></p>
+                <input id="feet1" class="w3-input w3-border" type="number" placeholder="" readonly>
+                <button id="button" name="button" onclick="meterstofeet()" class="w3-button w3-theme w3-section">Convert</button>
+            </div>
+            </div>
+        <div class="w3-content" style="max-width:2000px;margin-top:52px;margin-left:23px" id="fttom">
+            <h2 class="w3-wide">Feet to Meters</h2>
+            <div class="w3-container">
+                <p><label for="feet2">Feet</label></p>
+                <input id="feet2" class="w3-input w3-border" type="number" placeholder="">
+                <p><label for="meters2">Meters</label></p>
+                <input id="meters2" class="w3-input w3-border" type="number" placeholder="" readonly>
+                <button id="button" name="button" onclick="feettometers()" class="w3-button w3-theme w3-section">Convert</button>
+            <br>
+            <br>
+            <br>
+            </div>
+            </div>
+      </div>
+    </div>
+    </div>
+    
+<!-- Footer -->
+    <footer class="w3-container w3-theme-d3 w3-padding-16">
+        <h5>Website made for John Roy Geralde in partial fulfillment of CS 1130</h5>
+    </footer>
+
+    <footer class="w3-container w3-theme-d5">
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </footer>
+    
+    <script>
+        function farenheittocelsius(){
+            var farenheit, celsius;
+            if(document.getElementById("farenheit1").value == ""){
+                document.getElementById("celsius1").value = "";
+            }else{
+                farenheit = document.getElementById("farenheit1").value*1;
+                celsius = (farenheit-32)*5/9;
+                document.getElementById("celsius1").value = celsius = Math.round(celsius*100)/100;
+            }
+        }
+        function celsiustofarenheit(){
+            var farenheit, celsius;
+            if(document.getElementById("celsius2").value == ""){
+                document.getElementById("farenheit2").value = "";
+            }else{
+                celsius = document.getElementById("celsius2").value*1;
+                farenheit = (celsius*9/5)+32;
+                document.getElementById("farenheit2").value = farenheit = Math.round(farenheit*100)/100;
+            }
+        }
+        function meterstofeet(){
+            var meters, feet;
+            if(document.getElementById("meters1").value == ""){
+                document.getElementById("feet1").value = "";
+            }else{
+                meters = document.getElementById("meters1").value*1;
+                feet = meters*3.28084
+                document.getElementById("feet1").value = feet = Math.round(feet*100)/100;
+            }
+        }
+        function feettometers(){
+            var meters, feet;
+            if(document.getElementById("feet2").value == ""){
+                document.getElementById("meters2").value = "";
+            }else{
+                feet = document.getElementById("feet2").value*1;
+                meters = feet/3.28084
+                document.getElementById("meters2").value = meters = Math.round(meters*100)/100;
+            }
+        }
+        
+        // Accordion
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-theme-d1";
+  } else { 
+    x.className = x.className.replace("w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+  }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+    </script>
+
+    </body>
+</html> 
