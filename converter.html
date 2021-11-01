@@ -59,17 +59,39 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         </div>
       </div>
       <br>
+        
+        <!-- Interests --> 
+      <div class="w3-card w3-round w3-white w3-hide-small">
+        <div class="w3-container">
+          <p>Interests</p>
+          <p>
+            <span class="w3-tag w3-small w3-theme-d5">Games</span>
+            <span class="w3-tag w3-small w3-theme-d4">Programming</span>
+            <span class="w3-tag w3-small w3-theme-d3">Sleeping</span>
+            <span class="w3-tag w3-small w3-theme-d2">Eating</span>
+            <span class="w3-tag w3-small w3-theme-d1">Movies</span>
+          </p>
+        </div>
+      </div>
+      <br>
+
+      <!-- Alert Box -->
+      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
+          <i class="fa fa-remove"></i>
+        </span>
+        <p><strong>Alert!</strong></p>
+        <p>You still unfinished tasks! Get to work!</p>
+      </div>
     
     <!-- End Left Column -->
     </div>
     
     <!-- Middle Column -->
-    <div class="w3-col m9">  
+    <div class="w3-col m7">  
      <hr style="max-width:80%">
         <div class="w3-content" style="max-width:2000px;margin-top:1px;margin-left:23px" id="farenheittocelsius">
             <h1 class="w3-wide"><b>Simple Computations in Javascript</b></h1>
-            <br>
-            <br>
             <br>
             <h2 class="w3-wide">Fahrenheit to Celsius</h2>
             <div class="w3-container">
@@ -95,9 +117,9 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         <div class="w3-content" style="max-width:2000px;margin-top:52px;margin-left:23px" id="meterstofeet">
             <h2 class="w3-wide">Meters to Feet</h2>
             <div class="w3-container">
-                <p><label for="meters1">Meters | m</label></p>
+                <p><label for="meters1">Meters | m.</label></p>
                 <input id="meters1" class="w3-input w3-border" type="number" placeholder="">
-                <p><label for="feet1">Feet | ft</label></p>
+                <p><label for="feet1">Feet | ft.</label></p>
                 <input id="feet1" class="w3-input w3-border" type="number" placeholder="" readonly>
                 <button id="button" name="button" onclick="meterstofeet()" class="w3-button w3-theme w3-section">Convert</button>
                 <button id="clear" name="clear" onclick="clear3()" class="w3-button w3-theme w3-section">Clear</button>
@@ -106,9 +128,9 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         <div class="w3-content" style="max-width:2000px;margin-top:52px;margin-left:23px" id="feettometers">
             <h2 class="w3-wide">Feet to Meters</h2>
             <div class="w3-container">
-                <p><label for="feet2">Feet | ft</label></p>
+                <p><label for="feet2">Feet | ft.</label></p>
                 <input id="feet2" class="w3-input w3-border" type="number" placeholder="">
-                <p><label for="meters2">Meters | m</label></p>
+                <p><label for="meters2">Meters | m.</label></p>
                 <input id="meters2" class="w3-input w3-border" type="number" placeholder="" readonly>
                 <button id="button" name="button" onclick="feettometers()" class="w3-button w3-theme w3-section">Convert</button>
                 <button id="clear" name="clear" onclick="clear4()" class="w3-button w3-theme w3-section">Clear</button>
@@ -118,8 +140,42 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
             </div>
             </div>
       </div>
+    
+    <!-- Right Column -->
+    <div class="w3-col m2">
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>Upcoming Events:</p>
+          <img src="exam.png" alt="exam" style="width:100%;">
+          <p><strong>Final Summative Assessment</strong></p>
+          <p>November 3, 2021</p>
+          <p><button class="w3-button w3-block w3-theme-l4">Info</button></p>
+        </div>
+      </div>
+      <br>
+      
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>Friend Request</p>
+          <img src="friendrequest.png" alt="Avatar" style="width:50%"><br>
+          <span>Josh Elizalde Banggud</span>
+          <div class="w3-row w3-opacity">
+            <div class="w3-half">
+              <button class="w3-button w3-block w3-green w3-section" title="Accept"><i class="fa fa-check"></i></button>
+            </div>
+            <div class="w3-half">
+              <button class="w3-button w3-block w3-red w3-section" title="Decline"><i class="fa fa-remove"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      
+    <!-- End Right Column -->
     </div>
     </div>
+    </div>
+    
     
 <!-- Footer -->
     <footer class="w3-container w3-theme-d3 w3-padding-16">
