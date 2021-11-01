@@ -28,6 +28,10 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
       <a href="#" class="w3-bar-item w3-button">You have passed your activity on CS 1130 - Simple Payroll</a>
     </div>
   </div>
+     <a href="#fahrenheittocelsius" class="w3-bar-item w3-button w3-padding-large w3-hide-small">°F TO °C</a>
+     <a href="#celsiustofahrenheit" class="w3-bar-item w3-button w3-padding-large w3-hide-small">°C TO °F</a>
+     <a href="#meterstofeet" class="w3-bar-item w3-button w3-padding-large w3-hide-small">M. TO FT.</a>
+     <a href="#feettometers" class="w3-bar-item w3-button w3-padding-large w3-hide-small">M. TO FT.</a>
   <a href="https://www.facebook.com/dominic.miguel.almonte" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
     <img src="avatar.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
   </a>
@@ -91,6 +95,9 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
     <div class="w3-col m7">  
      <hr style="max-width:80%">
         <div class="w3-content" style="max-width:2000px;margin-top:1px;margin-left:23px" id="fahrenheittocelsius">
+            <br>
+        </div>
+        <div class="w3-content" style="max-width:2000px;margin-top:1px;margin-left:23px" id="ftoc">
             <h2 class="w3-wide">Fahrenheit to Celsius</h2>
             <div class="w3-container">
                 <p><label for="fahrenheit1">Fahrenheit | </label>°F</p>
@@ -101,7 +108,9 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
                 <button id="clear" name="clear" onclick="clear1()" class="w3-button w3-theme w3-section">Clear</button>
             </div>
             </div>
-        <div class="w3-content" style="max-width:2000px;margin-top:52px;margin-left:23px" id="celsiustofahrenheit">
+        <div class="w3-content" style="max-width:2000px;margin-top:1px;margin-left:23px" id="celsiustofahrenheit">
+        </div>
+        <div class="w3-content" style="max-width:2000px;margin-top:52px;margin-left:23px" id="ctof">
             <h2 class="w3-wide">Celsius to Fahrenheit</h2>
             <div class="w3-container">
                 <p><label for="celsius2">Celsius  | </label>°C</p>
@@ -112,7 +121,9 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
                 <button id="clear" name="clear" onclick="clear2()" class="w3-button w3-theme w3-section">Clear</button>
             </div>
             </div>
-        <div class="w3-content" style="max-width:2000px;margin-top:52px;margin-left:23px" id="meterstofeet">
+        <div class="w3-content" style="max-width:2000px;margin-top:1px;margin-left:23px" id="meterstofeet">
+        </div>
+        <div class="w3-content" style="max-width:2000px;margin-top:52px;margin-left:23px" id="mtofeet">
             <h2 class="w3-wide">Meters to Feet</h2>
             <div class="w3-container">
                 <p><label for="meters1">Meters | m.</label></p>
@@ -123,7 +134,9 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
                 <button id="clear" name="clear" onclick="clear3()" class="w3-button w3-theme w3-section">Clear</button>
             </div>
             </div>
-        <div class="w3-content" style="max-width:2000px;margin-top:52px;margin-left:23px" id="feettometers">
+        <div class="w3-content" style="max-width:2000px;margin-top:1px;margin-left:23px" id="feettometers">
+        </div>
+        <div class="w3-content" style="max-width:2000px;margin-top:52px;margin-left:23px" id="feettom">
             <h2 class="w3-wide">Feet to Meters</h2>
             <div class="w3-container">
                 <p><label for="feet2">Feet | ft.</label></p>
