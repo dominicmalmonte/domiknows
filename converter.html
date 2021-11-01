@@ -93,10 +93,10 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         <div class="w3-content" style="max-width:2000px;margin-top:1px;margin-left:23px" id="fahrenheittocelsius">
             <h2 class="w3-wide">Fahrenheit to Celsius</h2>
             <div class="w3-container">
-                <p><label for="fahrenheit1">Fahrenheit | </label>&degF.</p>
+                <p><label for="fahrenheit1">Fahrenheit | </label>°F</p>
                 <input id="fahrenheit1" class="w3-input w3-border" type="number" placeholder="">
-                <p><label for="celsius1">Celsius | </label>&degC.</p>
-                <input id="celsius1" class="w3-input w3-border" type="number" placeholder="" readonly>
+                <p><label for="celsius1">Celsius | </label>°C</p>
+                <input id="celsius1" class="w3-input w3-border" type="text" placeholder="" readonly>
                 <button id="button" name="button" onclick="fahrenheittocelsius()" class="w3-button w3-theme w3-section">Convert</button>
                 <button id="clear" name="clear" onclick="clear1()" class="w3-button w3-theme w3-section">Clear</button>
             </div>
@@ -104,10 +104,10 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         <div class="w3-content" style="max-width:2000px;margin-top:52px;margin-left:23px" id="celsiustofahrenheit">
             <h2 class="w3-wide">Celsius to Fahrenheit</h2>
             <div class="w3-container">
-                <p><label for="celsius2">Celsius  | </label>&degC.</p>
+                <p><label for="celsius2">Celsius  | </label>°C</p>
                 <input id="celsius2" class="w3-input w3-border" type="number" placeholder="">
-                <p><label for="fahrenheit2">Fahrenheit | </label>&degF.</p>
-                <input id="fahrenheit2" class="w3-input w3-border" type="number" placeholder="" readonly>
+                <p><label for="fahrenheit2">Fahrenheit | </label>°F</p>
+                <input id="fahrenheit2" class="w3-input w3-border" type="text" placeholder="" readonly>
                 <button id="button" name="button" onclick="celsiustofahrenheit()" class="w3-button w3-theme w3-section">Convert</button>
                 <button id="clear" name="clear" onclick="clear2()" class="w3-button w3-theme w3-section">Clear</button>
             </div>
@@ -118,7 +118,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
                 <p><label for="meters1">Meters | m.</label></p>
                 <input id="meters1" class="w3-input w3-border" type="number" placeholder="">
                 <p><label for="feet1">Feet | ft.</label></p>
-                <input id="feet1" class="w3-input w3-border" type="number" placeholder="" readonly>
+                <input id="feet1" class="w3-input w3-border" type="text" placeholder="" readonly>
                 <button id="button" name="button" onclick="meterstofeet()" class="w3-button w3-theme w3-section">Convert</button>
                 <button id="clear" name="clear" onclick="clear3()" class="w3-button w3-theme w3-section">Clear</button>
             </div>
@@ -129,7 +129,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
                 <p><label for="feet2">Feet | ft.</label></p>
                 <input id="feet2" class="w3-input w3-border" type="number" placeholder="">
                 <p><label for="meters2">Meters | m.</label></p>
-                <input id="meters2" class="w3-input w3-border" type="number" placeholder="" readonly>
+                <input id="meters2" class="w3-input w3-border" type="text" placeholder="" readonly>
                 <button id="button" name="button" onclick="feettometers()" class="w3-button w3-theme w3-section">Convert</button>
                 <button id="clear" name="clear" onclick="clear4()" class="w3-button w3-theme w3-section">Clear</button>
             <br>
@@ -192,7 +192,9 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
             }else{
                 fahrenheit = document.getElementById("fahrenheit1").value*1;
                 celsius = (fahrenheit-32)*5/9;
-                document.getElementById("celsius1").value = celsius = Math.round(celsius*100)/100;
+                celsius = celsius.toFixed(2);
+                celsius = celsius + " °C";
+                document.getElementById("celsius1").value = celsius;
             }
         }
         function celsiustofahrenheit(){
@@ -202,7 +204,9 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
             }else{
                 celsius = document.getElementById("celsius2").value*1;
                 fahrenheit = (celsius*9/5)+32;
-                document.getElementById("fahrenheit2").value = fahrenheit = Math.round(fahrenheit*100)/100;
+                fahrenheit = fahrenheit.toFixed(2);
+                fahrenheit = fahrenheit + " °F";
+                document.getElementById("fahrenheit2").value = fahrenheit;
             }
         }
         function meterstofeet(){
@@ -212,7 +216,9 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
             }else{
                 meters = document.getElementById("meters1").value*1;
                 feet = meters*3.28084
-                document.getElementById("feet1").value = feet = Math.round(feet*100)/100;
+                feet = feet.toFixed(2);
+                feet = feet + " ft.";
+                document.getElementById("feet1").value = feet;
             }
         }
         function feettometers(){
@@ -222,7 +228,9 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
             }else{
                 feet = document.getElementById("feet2").value*1;
                 meters = feet/3.28084
-                document.getElementById("meters2").value = meters = Math.round(meters*100)/100;
+                meters = meters.toFixed(2);
+                meters = meters + " m.";
+                document.getElementById("meters2").value = meters;
             }
         }
         function clear1(){
