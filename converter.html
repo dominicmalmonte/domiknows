@@ -130,7 +130,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
             }else{
                 farenheit = document.getElementById("farenheit1").value*1;
                 celsius = (farenheit-32)*5/9;
-                document.getElementById("celsius1").value = celsius = Math.round(celsius*100)/100;
+                document.getElementById("celsius1").value = celsius;
             }
         }
         function celsiustofarenheit(){
@@ -140,7 +140,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
             }else{
                 celsius = document.getElementById("celsius2").value*1;
                 farenheit = (celsius*9/5)+32;
-                document.getElementById("farenheit2").value = farenheit = Math.round(farenheit*100)/100;
+                document.getElementById("farenheit2").value = farenheit;
             }
         }
         function meterstofeet(){
@@ -150,7 +150,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
             }else{
                 meters = document.getElementById("meters1").value*1;
                 feet = meters*3.28084
-                document.getElementById("feet1").value = feet = Math.round(feet*100)/100;
+                document.getElementById("feet1").value = feet;
             }
         }
         function feettometers(){
@@ -160,7 +160,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
             }else{
                 feet = document.getElementById("feet2").value*1;
                 meters = feet/3.28084
-                document.getElementById("meters2").value = meters = Math.round(meters*100)/100;
+                document.getElementById("meters2").value = meters;
             }
         }
         
